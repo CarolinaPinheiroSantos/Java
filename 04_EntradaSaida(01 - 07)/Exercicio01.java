@@ -5,7 +5,7 @@ public class Exercicio01 {
 
         System.out.println("Insira seus daos para cadastramento");
         System.out.print("Digite seu nome inteiro:");
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
 
         System.out.print("Digite dia de nascimento: ");
         int dia_nascimento = scanner.nextInt();
@@ -17,17 +17,20 @@ public class Exercicio01 {
         int ano_nascimento = scanner.nextInt();
 
         System.out.print("Digite sua pretenção salarial: ");
-        int pretenção_salarial = scanner.nextInt();
+        int pretencao_salarial = scanner.nextInt();
 
-        System.out.print("Digite seu grau de ensino(ensino medio, ensino tecnico ou ensino superior): ");
-        String grau_ensino = scanner.next();
+        System.out.println("Digite seu grau de ensino(ensino medio, ensino tecnico ou ensino superior): ");
+        String grau_ensino = scanner.nextLine();
 
         System.out.print("Digite qual seu cargo pretendido: ");
-        String cargo = scanner.next();
+        String cargo = scanner.nextLine();
 
         System.out.print("Possui CNH do tipo B(sim ou nao): ");
-        String carta_carro = scanner.next();
+        String cartaB = scanner.nextLine();
 
-        System.out.printf("Nome: %c \n Data de nascimento: %d/%d/%d", nome, dia_nascimento, mes_nascimento,ano_nascimento);
+        System.out.println("Resumo da documentação");
+        System.out.printf("\nNome: %s \nData de nascimento: %d/%d/%d \nPretenção Salarial: R$%d \nGrau de ensino: %s \nCargo pretendido: %s \nPossui CNH tipo B: %s",
+                nome, dia_nascimento, mes_nascimento, ano_nascimento, pretencao_salarial, grau_ensino, cargo, cartaB);
+        System.out.print("Cadastro concluido com sucesso!!");
     }
 }
