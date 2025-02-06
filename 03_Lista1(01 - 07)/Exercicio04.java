@@ -25,6 +25,7 @@ public class Exercicio04 {
             valor_viagem = valor_viagem + (valor_viagem/100 * 45);
             System.out.println("O valor da viagem fica " + valor_viagem);
         }
+        scanner.close();
 
     }
 

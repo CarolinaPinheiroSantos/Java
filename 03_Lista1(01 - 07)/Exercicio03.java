@@ -16,5 +16,6 @@ public class Exercicio03 {
         } else {
             System.out.println("É o são paulo ganhou afff 🙄");
         }
+        scanner.close();
     }
 }

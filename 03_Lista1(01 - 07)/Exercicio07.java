@@ -23,5 +23,6 @@ public class Exercicio07 {
         }else {
             System.out.println("É dá pra melhorar né");
         }
+        scanner.close();
     }
 }

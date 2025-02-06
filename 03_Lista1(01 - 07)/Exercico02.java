@@ -24,6 +24,6 @@ public class Exercico02 {
             total_desconto = total - (total / 10);
             System.out.println("Você ganhou 10% de desconto! O valor total da compra é " + total + " e com desconto ficou " + total_desconto);
         }
-
+        scanner.close();
     }
 }

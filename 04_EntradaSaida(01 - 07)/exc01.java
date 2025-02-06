@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Exercicio01 {
+public class exc01 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -18,8 +18,9 @@ public class Exercicio01 {
 
         System.out.print("Digite sua pretenção salarial: ");
         int pretencao_salarial = scanner.nextInt();
+        scanner.nextLine();
 
-        System.out.println("Digite seu grau de ensino(ensino medio, ensino tecnico ou ensino superior): ");
+        System.out.print("Digite seu grau de ensino(ensino medio, ensino tecnico ou ensino superior): ");
         String grau_ensino = scanner.nextLine();
 
         System.out.print("Digite qual seu cargo pretendido: ");
@@ -28,9 +29,11 @@ public class Exercicio01 {
         System.out.print("Possui CNH do tipo B(sim ou nao): ");
         String cartaB = scanner.nextLine();
 
-        System.out.println("Resumo da documentação");
+        System.out.println("\nResumo da documentação");
         System.out.printf("\nNome: %s \nData de nascimento: %d/%d/%d \nPretenção Salarial: R$%d \nGrau de ensino: %s \nCargo pretendido: %s \nPossui CNH tipo B: %s",
                 nome, dia_nascimento, mes_nascimento, ano_nascimento, pretencao_salarial, grau_ensino, cargo, cartaB);
-        System.out.print("Cadastro concluido com sucesso!!");
+        System.out.println("Cadastro concluido com sucesso!!");
+
+        scanner.close();
     }
 }

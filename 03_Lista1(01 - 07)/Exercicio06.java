@@ -20,5 +20,6 @@ public class Exercicio06 {
         }
         System.out.println(numeroAleatorio);
         System.out.println("Na proxima quem sabe você consegue...");
+        scanner.close();
     }
 }

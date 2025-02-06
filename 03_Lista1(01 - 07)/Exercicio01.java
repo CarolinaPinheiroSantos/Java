@@ -18,6 +18,7 @@ public class Exercicio01 {
             System.out.println("Você é aldulto ou velho");
 
         }
+        scanner.close();
     }
 }
 
