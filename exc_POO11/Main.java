@@ -19,20 +19,24 @@ public class Main {
         Produto produtos = new Produto();
         produtos.exibirInfo();
 
+
         Carrinho carrinho = new Carrinho(produtos);
 
-        for (int i=2; i > 0; i--){
+        for (int i=3; i > 0; i--){
             System.out.println("Escolha um produto: ");
             String produtoEscolhido = scanner.nextLine();
+
             System.out.println("Quantidade: ");
             int quantidade = scanner.nextInt();
-            scanner.nextLine(); // consumir o \n
+            scanner.nextLine();
+
             carrinho.adicionarProduto(produtoEscolhido, quantidade);
         }
 
-        System.out.println("Digite o % do desconto: ");
+        System.out.println("Digite o % do desconto da compra: ");
         double percentual = scanner.nextDouble();
 
+        carrinho.calcularTotal();
         carrinho.mostrarResumo(percentual);
 
     }

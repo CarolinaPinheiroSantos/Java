@@ -4,24 +4,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Carrinho {
-    private Map<String, Integer> itens = new HashMap<>(); // produto e quantidade
-    private Produto produtosDisponiveis; // referência para pegar os preços
+    private Map<String, Integer> itens = new HashMap<>();
+    private Produto produtosDisponiveis; // Referência ao objeto Produto
 
+    // Construtor do Carrinho
     public Carrinho(Produto produtosDisponiveis) {
         this.produtosDisponiveis = produtosDisponiveis;
     }
 
-    // Adiciona um produto
+
     public void adicionarProduto(String nomeProduto, int quantidade) {
         if (produtosDisponiveis.getDetalhe().containsKey(nomeProduto)) {
             itens.put(nomeProduto, itens.getOrDefault(nomeProduto, 0) + quantidade);
-            System.out.println(quantidade + " x " + nomeProduto + " adicionado(s) ao carrinho.");
         } else {
             System.out.println("Produto não encontrado!");
         }
     }
 
-    // Calcula o total sem desconto
+    //Total sem desconto
     public double calcularTotal() {
         double total = 0.0;
         for (Map.Entry<String, Integer> entry : itens.entrySet()) {
@@ -30,17 +30,19 @@ public class Carrinho {
             double preco = produtosDisponiveis.getDetalhe().get(nome);
             total += preco * qtd;
         }
+        System.out.println("Total sem desconto: " + total);
         return total;
+
     }
 
-    // Aplica desconto
+    //Desconto
     public double aplicarDesconto(double percentual) {
         double total = calcularTotal();
         double desconto = total * (percentual / 100);
         return total - desconto;
     }
 
-    // Mostra resumo da compra
+    //Total com desconto
     public void mostrarResumo(double percentualDesconto) {
         System.out.println("\nResumo da Compra:");
         for (Map.Entry<String, Integer> entry : itens.entrySet()) {
